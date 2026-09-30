@@ -1,0 +1,592 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* BODY */
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    min-height: 100vh;
+
+    color: #654d58;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #fff9fb,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #f6d5e3,
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #fff5f8,
+            #fbe4ed
+        );
+}
+
+
+/* PAGE */
+
+.page {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 45px 20px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* CARD */
+
+.card {
+    width: 100%;
+    max-width: 720px;
+
+    padding: 45px 45px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 1px solid rgba(200, 130, 155, 0.2);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 50px rgba(130, 75, 100, 0.15);
+
+    backdrop-filter: blur(10px);
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* HEADER */
+
+.mini-title {
+    color: #b47790;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+}
+
+
+h1 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 48px;
+
+    color: #965a74;
+
+    margin-bottom: 10px;
+}
+
+
+.subtitle {
+    color: #866875;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+/* TWO PHOTOS */
+
+.teachers {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 15px;
+}
+
+
+.photo-box {
+    width: 50%;
+
+    height: 180px;
+
+    padding: 6px;
+
+    background: white;
+
+    border: 3px solid #e5b3c6;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 20px rgba(130, 75, 100, 0.13);
+}
+
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 13px;
+}
+
+
+/* NAMES */
+
+.names {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+.names span {
+    width: 50%;
+
+    color: #9d6079;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+
+/* HIDDEN CHECKBOX */
+
+#open-message {
+    display: none;
+}
+
+
+/* OPEN BUTTON */
+
+.open-button {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background: #c9829f;
+
+    color: white;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    box-shadow:
+        0 8px 20px rgba(150, 88, 112, 0.2);
+
+    transition: 0.3s ease;
+}
+
+
+.open-button:hover {
+    background: #b86f8d;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(150, 88, 112, 0.25);
+}
+
+
+/* MESSAGE */
+
+.message {
+    max-height: 0;
+
+    opacity: 0;
+
+    overflow: hidden;
+
+    transform: translateY(-15px);
+
+    transition:
+        max-height 1s ease,
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+#open-message:checked ~ .message {
+
+    max-height: 1500px;
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+    margin-top: 30px;
+}
+
+
+/* BUTTON AFTER OPEN */
+
+#open-message:checked + .open-button {
+    background: #965a74;
+}
+
+
+/* DIVIDER */
+
+.divider {
+    color: #d18ca8;
+
+    font-size: 12px;
+
+    margin-bottom: 20px;
+
+    letter-spacing: 2px;
+}
+
+
+/* MESSAGE TITLE */
+
+.message h2 {
+    font-family: 'DM Serif Display', serif;
+
+    color: #965a74;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+
+/* MESSAGE TEXT */
+
+.message p {
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: #6d5861;
+
+    margin-bottom: 17px;
+}
+
+
+.message .special {
+    color: #a25977;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.closing {
+    font-weight: 500;
+}
+
+
+/* MUSIC */
+
+.music-box {
+    max-width: 450px;
+
+    margin: 30px auto 20px;
+
+    padding: 18px;
+
+    background: #fff1f5;
+
+    border: 1px solid #f0ceda;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.music-icon {
+    font-size: 27px;
+}
+
+
+.music-info {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.music-info strong {
+    color: #95556f;
+
+    font-size: 14px;
+}
+
+
+.music-info small {
+    color: #967582;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+
+.music-box audio {
+    width: 100%;
+
+    max-width: 350px;
+}
+
+
+/* SIGNATURE */
+
+.signature {
+    margin-top: 20px;
+
+    color: #8c6a77;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+.signature strong {
+    color: #a45e7b;
+
+    font-size: 14px;
+}
+
+
+/* DECORATIONS */
+
+.decoration {
+    position: absolute;
+
+    z-index: 1;
+
+    opacity: 0.65;
+
+    animation: float 4s ease-in-out infinite;
+}
+
+
+.flower-one {
+    top: 12%;
+    left: 8%;
+
+    font-size: 30px;
+}
+
+
+.flower-two {
+    top: 25%;
+    right: 8%;
+
+    font-size: 28px;
+
+    animation-delay: 1s;
+}
+
+
+.flower-three {
+    bottom: 12%;
+    left: 10%;
+
+    font-size: 30px;
+
+    animation-delay: 2s;
+}
+
+
+.heart-one {
+    top: 45%;
+    left: 4%;
+
+    color: #d28ca5;
+
+    font-size: 30px;
+}
+
+
+.heart-two {
+    bottom: 25%;
+    right: 5%;
+
+    color: #d28ca5;
+
+    font-size: 30px;
+
+    animation-delay: 1.5s;
+}
+
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* FOOTER */
+
+.footer {
+    margin-top: 20px;
+
+    color: #a47c8c;
+
+    font-size: 11px;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding: 25px 12px;
+    }
+
+
+    .card {
+        padding: 30px 18px;
+
+        border-radius: 25px;
+    }
+
+
+    h1 {
+        font-size: 36px;
+    }
+
+
+    .mini-title {
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+
+    /* TWO LANDSCAPE PHOTOS ON PHONE */
+
+    .teachers {
+        gap: 10px;
+    }
+
+
+    .photo-box {
+        width: 50%;
+
+        height: 150px;
+
+        padding: 5px;
+
+        border-radius: 15px;
+    }
+
+
+    .photo-box img {
+        border-radius: 10px;
+    }
+
+
+    .names {
+        gap: 10px;
+    }
+
+
+    .names span {
+        font-size: 10px;
+    }
+
+
+    .open-button {
+        padding: 13px 22px;
+
+        font-size: 13px;
+    }
+
+
+    .message h2 {
+        font-size: 24px;
+    }
+
+
+    .message p {
+        font-size: 12.5px;
+
+        line-height: 1.8;
+    }
+
+
+    .message .special {
+        font-size: 13px;
+    }
+
+
+    .decoration {
+        font-size: 20px;
+    }
+
+}
